@@ -1,11 +1,201 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>myposter</title>
-    
-  </head>
-  <body>
-    <h1>my poster project</h1>
-    <p>welcome to my website!</p>
-  </body>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Electronics Business Poster</title>
+
+<style>
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        font-family: Arial, sans-serif;
+        background: #111;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+    }
+
+    .poster {
+        width: 600px;
+        min-height: 800px;
+        padding: 45px 35px;
+        text-align: center;
+        color: white;
+        background: linear-gradient(145deg, #071a2b, #003b5c, #00151f);
+        border: 5px solid #00d9ff;
+        box-shadow: 0 0 30px #00d9ff;
+    }
+
+    .logo {
+        font-size: 55px;
+        margin-bottom: 10px;
+    }
+
+    h1 {
+        font-size: 42px;
+        color: #00e5ff;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+    }
+
+    .subtitle {
+        font-size: 20px;
+        color: #ddd;
+        margin-bottom: 35px;
+    }
+
+    .services {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+
+    .card {
+        background: rgba(255,255,255,0.08);
+        border: 2px solid #00d9ff;
+        border-radius: 15px;
+        padding: 25px 10px;
+        transition: 0.3s;
+    }
+
+    .card:hover {
+        transform: scale(1.05);
+        background: rgba(0,217,255,0.15);
+    }
+
+    .icon {
+        font-size: 45px;
+        margin-bottom: 12px;
+    }
+
+    .card h2 {
+        font-size: 20px;
+        color: #00e5ff;
+        margin-bottom: 8px;
+    }
+
+    .card p {
+        color: #ddd;
+        font-size: 15px;
+    }
+
+    .offer {
+        margin: 35px 0;
+        padding: 18px;
+        background: #00d9ff;
+        color: #00151f;
+        border-radius: 12px;
+        font-size: 23px;
+        font-weight: bold;
+    }
+
+    .contact {
+        margin-top: 25px;
+        font-size: 19px;
+        line-height: 1.8;
+    }
+
+    .contact span {
+        color: #00e5ff;
+        font-weight: bold;
+    }
+
+    .footer {
+        margin-top: 30px;
+        color: #bbb;
+        font-size: 16px;
+    }
+
+    @media (max-width: 650px) {
+        .poster {
+            width: 95%;
+            padding: 30px 20px;
+        }
+
+        h1 {
+            font-size: 32px;
+        }
+
+        .services {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>
+</head>
+
+<body>
+
+<div class="poster">
+
+    <div class="logo">📱⚡</div>
+
+    <h1>Tech Zone</h1>
+
+    <div class="subtitle">
+        ELECTRONICS • PHONE ACCESSORIES • SPARES
+    </div>
+
+    <div class="services">
+
+        <div class="card">
+            <div class="icon">📺</div>
+            <h2>Electronics</h2>
+            <p>
+                Quality electronic products at affordable prices.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="icon">📱</div>
+            <h2>Phone Accessories</h2>
+            <p>
+                Chargers, cables, earphones, covers, screen protectors and more.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="icon">🔧</div>
+            <h2>Phone Spares</h2>
+            <p>
+                Reliable spare parts for different phone models.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="icon">🔌</div>
+            <h2>Gadgets</h2>
+            <p>
+                Useful gadgets and accessories for everyday technology.
+            </p>
+        </div>
+
+    </div>
+
+    <div class="offer">
+        🔥 QUALITY PRODUCTS • GREAT PRICES 🔥
+    </div>
+
+    <div class="contact">
+        <span>📞 Call / WhatsApp:</span><br>
+        0796407278
+        <br><br>
+
+        <span>✉ Email:</span><br>
+        jeremiahmusembi@gmail.com
+    </div>
+
+    <div class="footer">
+        Visit us today and upgrade your technology!
+    </div>
+
+</div>
+
+</body>
 </html>
