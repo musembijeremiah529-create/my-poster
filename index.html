@@ -4,198 +4,529 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Electronics Business Poster</title>
+<title>Jeremiah Electronics</title>
 
 <style>
-    * {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-    }
+* {
+    box-sizing: border-box;
+}
 
-    body {
-        font-family: Arial, sans-serif;
-        background: #111;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        min-height: 100vh;
-    }
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f2f5f8;
+    color: #222;
+}
 
-    .poster {
-        width: 600px;
-        min-height: 800px;
-        padding: 45px 35px;
-        text-align: center;
-        color: white;
-        background: linear-gradient(145deg, #071a2b, #003b5c, #00151f);
-        border: 5px solid #00d9ff;
-        box-shadow: 0 0 30px #00d9ff;
-    }
+/* HEADER */
+header {
+    background: linear-gradient(135deg, #061952, #087f8c);
+    color: white;
+    text-align: center;
+    padding: 35px 15px;
+}
 
-    .logo {
-        font-size: 55px;
-        margin-bottom: 10px;
-    }
+header h1 {
+    margin: 0;
+    font-size: 35px;
+}
 
-    h1 {
-        font-size: 42px;
-        color: #00e5ff;
-        text-transform: uppercase;
-        margin-bottom: 10px;
-    }
+header p {
+    font-size: 18px;
+}
 
-    .subtitle {
-        font-size: 20px;
-        color: #ddd;
-        margin-bottom: 35px;
-    }
+/* CATEGORY BUTTONS */
+.categories {
+    text-align: center;
+    padding: 25px 10px;
+}
 
-    .services {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 20px;
-    }
+.categories button {
+    border: none;
+    background: white;
+    padding: 15px 22px;
+    margin: 7px;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 3px 10px #bbb;
+}
 
-    .card {
-        background: rgba(255,255,255,0.08);
-        border: 2px solid #00d9ff;
-        border-radius: 15px;
-        padding: 25px 10px;
-        transition: 0.3s;
-    }
+.categories button:hover {
+    background: #087f8c;
+    color: white;
+}
 
-    .card:hover {
-        transform: scale(1.05);
-        background: rgba(0,217,255,0.15);
-    }
+/* PRODUCTS */
+#products {
+    max-width: 1000px;
+    margin: auto;
+    padding: 20px;
+}
 
-    .icon {
-        font-size: 45px;
-        margin-bottom: 12px;
-    }
+#categoryTitle {
+    text-align: center;
+    color: #061952;
+}
 
-    .card h2 {
-        font-size: 20px;
-        color: #00e5ff;
-        margin-bottom: 8px;
-    }
+.product-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    gap: 20px;
+}
 
-    .card p {
-        color: #ddd;
-        font-size: 15px;
-    }
+.product {
+    background: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px #ccc;
+}
 
-    .offer {
-        margin: 35px 0;
-        padding: 18px;
-        background: #00d9ff;
-        color: #00151f;
-        border-radius: 12px;
-        font-size: 23px;
-        font-weight: bold;
-    }
+.product-icon {
+    font-size: 50px;
+}
 
-    .contact {
-        margin-top: 25px;
-        font-size: 19px;
-        line-height: 1.8;
-    }
+.product h3 {
+    margin: 10px 0;
+}
 
-    .contact span {
-        color: #00e5ff;
-        font-weight: bold;
-    }
+.price {
+    color: #087f8c;
+    font-weight: bold;
+    font-size: 18px;
+}
 
-    .footer {
-        margin-top: 30px;
-        color: #bbb;
-        font-size: 16px;
-    }
+.order-button {
+    background: #061952;
+    color: white;
+    border: none;
+    padding: 11px 20px;
+    border-radius: 7px;
+    cursor: pointer;
+}
 
-    @media (max-width: 650px) {
-        .poster {
-            width: 95%;
-            padding: 30px 20px;
-        }
+.order-button:hover {
+    background: #087f8c;
+}
 
-        h1 {
-            font-size: 32px;
-        }
+/* ORDER FORM */
+.order {
+    max-width: 600px;
+    margin: 40px auto;
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px #ccc;
+}
 
-        .services {
-            grid-template-columns: 1fr;
-        }
-    }
+.order h2 {
+    text-align: center;
+    color: #061952;
+}
+
+.order input,
+.order select,
+.order textarea {
+    width: 100%;
+    padding: 13px;
+    margin: 8px 0 15px;
+    border: 1px solid #ccc;
+    border-radius: 7px;
+}
+
+.whatsapp {
+    width: 100%;
+    background: #25D366;
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.whatsapp:hover {
+    background: #1da851;
+}
+
+/* FOOTER */
+footer {
+    background: #061952;
+    color: white;
+    text-align: center;
+    padding: 25px;
+    margin-top: 40px;
+}
 </style>
 </head>
 
 <body>
 
-<div class="poster">
+<!-- HEADER -->
 
-    <div class="logo">📱⚡</div>
+<header>
 
-    <h1>Tech Zone</h1>
+    <h1>JEREMIAH ELECTRONICS</h1>
 
-    <div class="subtitle">
-        ELECTRONICS • PHONE ACCESSORIES • SPARES
-    </div>
+    <p>
+        Electronics • Phone Accessories • Spares • Shoes
+    </p>
 
-    <div class="services">
+    <p>
+        Quality Products at Affordable Prices
+    </p>
 
-        <div class="card">
-            <div class="icon">📺</div>
-            <h2>Electronics</h2>
-            <p>
-                Quality electronic products at affordable prices.
-            </p>
-        </div>
+</header>
 
-        <div class="card">
-            <div class="icon">📱</div>
-            <h2>Phone Accessories</h2>
-            <p>
-                Chargers, cables, earphones, covers, screen protectors and more.
-            </p>
-        </div>
 
-        <div class="card">
-            <div class="icon">🔧</div>
-            <h2>Phone Spares</h2>
-            <p>
-                Reliable spare parts for different phone models.
-            </p>
-        </div>
+<!-- CATEGORY MENU -->
 
-        <div class="card">
-            <div class="icon">🔌</div>
-            <h2>Gadgets</h2>
-            <p>
-                Useful gadgets and accessories for everyday technology.
-            </p>
-        </div>
+<div class="categories">
 
-    </div>
+    <button onclick="showCategory('electronics')">
+        🔌 Electronics
+    </button>
 
-    <div class="offer">
-        🔥 QUALITY PRODUCTS • GREAT PRICES 🔥
-    </div>
+    <button onclick="showCategory('accessories')">
+        📱 Phone Accessories
+    </button>
 
-    <div class="contact">
-        <span>📞 Call / WhatsApp:</span><br>
-        0796407278
-        <br><br>
+    <button onclick="showCategory('spares')">
+        🔧 Spares
+    </button>
 
-        <span>✉ Email:</span><br>
-        jeremiahmusembi@gmail.com
-    </div>
-
-    <div class="footer">
-        Visit us today and upgrade your technology!
-    </div>
+    <button onclick="showCategory('shoes')">
+        👟 Shoes
+    </button>
 
 </div>
+
+
+<!-- PRODUCTS -->
+
+<section id="products">
+
+    <h2 id="categoryTitle">
+        Click a category to view products
+    </h2>
+
+    <div id="productContainer" class="product-container">
+    </div>
+
+</section>
+
+
+<!-- ORDER FORM -->
+
+<section class="order">
+
+    <h2>🛒 Place Your Order</h2>
+
+    <form onsubmit="sendOrder(event)">
+
+        <label>Your Name</label>
+
+        <input
+            type="text"
+            id="name"
+            placeholder="Enter your name"
+            required
+        >
+
+
+        <label>Phone Number</label>
+
+        <input
+            type="tel"
+            id="phone"
+            placeholder="Enter your phone number"
+            required
+        >
+
+
+        <label>Product</label>
+
+        <select id="product" required>
+
+            <option value="">
+                Select a product
+            </option>
+
+        </select>
+
+
+        <label>Quantity</label>
+
+        <input
+            type="number"
+            id="quantity"
+            value="1"
+            min="1"
+            required
+        >
+
+
+        <label>Delivery Location</label>
+
+        <input
+            type="text"
+            id="location"
+            placeholder="Enter delivery location"
+            required
+        >
+
+
+        <label>Message</label>
+
+        <textarea
+            id="message"
+            placeholder="Additional information"
+        ></textarea>
+
+
+        <button class="whatsapp" type="submit">
+
+            📲 Order Through WhatsApp
+
+        </button>
+
+    </form>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <h3>Contact Us</h3>
+
+    <p>📞 0796407278</p>
+
+    <p>📧 jeremiahmusembi@gmail.com</p>
+
+    <p>© 2026 Jeremiah Electronics</p>
+
+</footer>
+
+
+<script>
+
+/* PRODUCTS */
+
+const products = {
+
+    electronics: [
+        ["Bluetooth Speaker", "KSh 2,500", "🔊"],
+        ["Smart TV", "KSh 25,000", "📺"],
+        ["Electric Kettle", "KSh 1,500", "☕"],
+        ["Extension Cable", "KSh 800", "🔌"]
+    ],
+
+    accessories: [
+        ["Phone Charger", "KSh 700", "🔋"],
+        ["USB Cable", "KSh 300", "🔌"],
+        ["Earphones", "KSh 500", "🎧"],
+        ["Phone Cover", "KSh 600", "📱"],
+        ["Power Bank", "KSh 1,500", "🔋"]
+    ],
+
+    spares: [
+        ["Phone Screen", "KSh 3,500", "📱"],
+        ["Phone Battery", "KSh 1,500", "🔋"],
+        ["Charging Port", "KSh 800", "🔧"],
+        ["Phone Speaker", "KSh 700", "🔊"]
+    ],
+
+    shoes: [
+        ["Sports Shoes", "KSh 2,500", "👟"],
+        ["Sneakers", "KSh 3,000", "👟"],
+        ["Casual Shoes", "KSh 2,800", "👞"],
+        ["School Shoes", "KSh 2,000", "👞"]
+    ]
+
+};
+
+
+/* SHOW CATEGORY */
+
+function showCategory(category) {
+
+    let container =
+        document.getElementById("productContainer");
+
+    let title =
+        document.getElementById("categoryTitle");
+
+    let select =
+        document.getElementById("product");
+
+
+    container.innerHTML = "";
+
+    select.innerHTML =
+        '<option value="">Select a product</option>';
+
+
+    let categoryName = "";
+
+    if (category === "electronics") {
+
+        categoryName = "🔌 Electronics";
+
+    }
+
+    else if (category === "accessories") {
+
+        categoryName = "📱 Phone Accessories";
+
+    }
+
+    else if (category === "spares") {
+
+        categoryName = "🔧 Spares";
+
+    }
+
+    else if (category === "shoes") {
+
+        categoryName = "👟 Shoes";
+
+    }
+
+
+    title.innerHTML = categoryName;
+
+
+    products[category].forEach(function(item) {
+
+        let name = item[0];
+
+        let price = item[1];
+
+        let icon = item[2];
+
+
+        container.innerHTML += `
+
+            <div class="product">
+
+                <div class="product-icon">
+                    ${icon}
+                </div>
+
+                <h3>${name}</h3>
+
+                <p class="price">
+                    ${price}
+                </p>
+
+                <button
+                    class="order-button"
+                    onclick="chooseProduct('${name}')">
+
+                    Order Now
+
+                </button>
+
+            </div>
+
+        `;
+
+
+        select.innerHTML += `
+
+            <option value="${name}">
+                ${name} - ${price}
+            </option>
+
+        `;
+
+    });
+
+}
+
+
+/* CHOOSE PRODUCT */
+
+function chooseProduct(product) {
+
+    document.getElementById("product").value =
+        product;
+
+
+    document.querySelector(".order").scrollIntoView({
+        behavior: "smooth"
+    });
+
+}
+
+
+/* SEND WHATSAPP ORDER */
+
+function sendOrder(event) {
+
+    event.preventDefault();
+
+
+    let name =
+        document.getElementById("name").value;
+
+    let phone =
+        document.getElementById("phone").value;
+
+    let product =
+        document.getElementById("product").value;
+
+    let quantity =
+        document.getElementById("quantity").value;
+
+    let location =
+        document.getElementById("location").value;
+
+    let message =
+        document.getElementById("message").value;
+
+
+    /* YOUR WHATSAPP NUMBER */
+
+    let whatsappNumber = "254796402278";
+
+
+    let text =
+        "NEW ORDER%0A%0A" +
+
+        "Customer: " + name + "%0A" +
+
+        "Phone: " + phone + "%0A" +
+
+        "Product: " + product + "%0A" +
+
+        "Quantity: " + quantity + "%0A" +
+
+        "Delivery Location: " + location + "%0A" +
+
+        "Message: " + message;
+
+
+    let whatsappURL =
+        "https://wa.me/" +
+        whatsappNumber +
+        "?text=" +
+        text;
+
+
+    window.open(
+        whatsappURL,
+        "_blank"
+    );
+
+}
+
+</script>
 
 </body>
 </html>
